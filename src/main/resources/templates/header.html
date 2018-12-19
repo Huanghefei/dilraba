@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>头部</title>
+<!-- 中文乱码 -->
+<meta charset="UTF-8">
+<!--适配IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 适配移动端 -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet"
+	href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet"
+	href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<div th:fragment="header-body">
+	<!--导航-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!--小屏幕导航按钮和logo-->
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="/home" class="navbar-brand">麦子学院</a>
+			</div>
+			<!--小屏幕导航按钮和logo-->
+			<!--导航-->
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#banner">首页</a></li>
+					<li><a href="#icon">论坛</a></li>
+					<li><a href="#html5">前端开发</a></li>
+					<li><a href="#app">移动APP</a></li>
+					<li><a href="#contact">联系我们</a></li>
+				</ul>
+			</div>
+			<!--导航-->
+		</div>
+	</nav>
+	<!--导航-->
+</div>
+
+<script src="../static/js/home.js"></script>
+
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hhf.dilraba.dao.HomeDao">
+
+	<sql id="t_banner">
+		banner_id, url
+	</sql>
+
+	<resultMap type="java.util.HashMap" id="t_banner">
+		<result column="banner_id" property="banner_id" />
+		<result column="url" property="url" />
+	</resultMap>
+
+	<select id="getBanner" resultMap="t_banner">
+		SELECT
+		<include refid="t_banner" />
+		FROM t_banner
+		<where>
+			STATUS = 1
+		</where>
+		ORDER BY weight DESC, update_time DESC
+	</select>
+
+	<insert id="submitOptions">
+		INSERT INTO t_opinion(username, contact, content)
+		VALUES(#{username}, #{contact}, #{content})
+	</insert>
+
+</mapper>
