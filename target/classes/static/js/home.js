@@ -1,29 +1,29 @@
 $(function() {
 
 	// banner
-	$.ajax({
-		url : REQUEST_URL.GETBANNER,
-		type : 'post',
-		async : false,
-		success : function(data) {
-			//			$.responceHandle(data);
-			if (data.status == 0) {
-				var list = data.result;
-				for (var i = 0; i < list.length; i++) {
-					if (i == 0) {
-						$("#indicator").append("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
-						$("#inner").append("<div class='item active'><img src=" + list[i].url + " alt=''></div>");
-					} else {
-						$("#indicator").append("<li data-target='#myCarousel' data-slide-to='" + i + "'></li>");
-						$("#inner").append("<div class='item'><img src=" + list[i].url + " alt=''></div>");
-					}
-				}
-			} else {
-
-			}
-
-		},
-	});
+//	$.ajax({
+//		url : REQUEST_URL.GETBANNER,
+//		type : 'post',
+//		async : false,
+//		success : function(data) {
+//			//			$.responceHandle(data);
+//			if (data.status == 0) {
+//				var list = data.result;
+//				for (var i = 0; i < list.length; i++) {
+//					if (i == 0) {
+//						$("#indicator").append("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
+//						$("#inner").append("<div class='item active'><img src=" + list[i].url + " alt=''></div>");
+//					} else {
+//						$("#indicator").append("<li data-target='#myCarousel' data-slide-to='" + i + "'></li>");
+//						$("#inner").append("<div class='item'><img src=" + list[i].url + " alt=''></div>");
+//					}
+//				}
+//			} else {
+//
+//			}
+//
+//		},
+//	});
 
 	/*图片轮播*/
 	$("#myCarousel").carousel({
@@ -67,7 +67,7 @@ $(function() {
 							window.location.reload();
 						}, 3000);
 					} else {
-						toastr.error("提是失败", "FAIL");
+						toastr.error("提交失败", "FAIL");
 					}
 
 				},
