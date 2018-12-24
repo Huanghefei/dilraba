@@ -18,7 +18,7 @@ public class PageController {
 	 * @author Huanghefei
 	 * @return
 	 */
-	@GetMapping(value = "/home")
+	@GetMapping(value = "/")
 	public String home() {
 		redisService.incr("LOVEDILRABACOUNT");
 		return "home";
